@@ -1,87 +1,212 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Voltr Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#6366F1",
+    "light": "#818CF8",
+    "dark": "#4F46E5"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.ico",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
+            "icon": "rocket",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "introduction/how-it-works",
+              "introduction/key-participants"
             ]
           },
           {
-            "group": "Customization",
+            "group": "For Users",
+            "icon": "user",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "users/overview",
+              {
+                "group": "Curated Vaults",
+                "expanded": false,
+                "pages": [
+                  {
+                    "group": "Ranger USD (rgUSD)",
+                    "pages": [
+                      "users/rgusd/index",
+                      "users/rgusd/yield-generation",
+                      "users/rgusd/risk-management",
+                      "users/rgusd/audit-and-transparency"
+                    ]
+                  },
+                  "users/vaults/hyperpack-arbitrage",
+                  "users/vaults/stablecoin-multi-lend",
+                  "users/vaults/elemental-usds-lending",
+                  "users/vaults/elemental-usdc-lending",
+                  "users/vaults/driftpack-arbitrage",
+                  "users/vaults/jlp-hyperloop",
+                  "users/vaults/elemental-usdg-lending",
+                  "users/vaults/ultrax-arbitrage"
+                ]
+              },
+              "users/vault-risk-disclosure"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Technical Guides",
+            "icon": "compass",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "explore/vault-owners",
+              "explore/yield-protocols",
+              "explore/composing-protocols"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Resources",
+            "icon": "book-open",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "explore/security",
+              "explore/github",
+              "explore/api-docs"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Vault Managers",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Getting Started",
+            "icon": "vault",
             "pages": [
-              "api-reference/introduction"
+              "vault-owners/overview",
+              "vault-owners/initialization/choose-your-path",
+              "vault-owners/initialization/via-ui"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Vault Setup (SDK)",
+            "icon": "code",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "vault-owners/initialization/prerequisites",
+              "vault-owners/initialization/create-vault",
+              "vault-owners/initialization/lp-metadata",
+              "vault-owners/initialization/update-configuration",
+              "vault-owners/initialization/strategy-initialization"
+            ]
+          },
+          {
+            "group": "Strategies & Allocation",
+            "icon": "route",
+            "pages": [
+              "vault-owners/strategies/setup-guide",
+              "vault-owners/strategies/integrations",
+              "vault-owners/allocation/overview",
+              "vault-owners/allocation/prerequisites",
+              "vault-owners/allocation/deploy-funds"
+            ]
+          },
+          {
+            "group": "Operations",
+            "icon": "gears",
+            "pages": [
+              "vault-owners/operations/overview",
+              "vault-owners/operations/bots-and-scripts",
+              "vault-owners/operations/monitoring",
+              "vault-owners/fees-and-accounting"
+            ]
+          },
+          {
+            "group": "Go-To-Market",
+            "icon": "bullhorn",
+            "pages": [
+              "vault-owners/go-to-market/checklist",
+              "vault-owners/go-to-market/indexing-and-listing",
+              "vault-owners/go-to-market/token-verification",
+              "vault-owners/frontend-integration"
+            ]
+          },
+          {
+            "group": "API",
+            "icon": "server",
+            "pages": [
+              "developers/api-overview",
+              "developers/endpoints/vaults",
+              "developers/endpoints/vault"
+            ]
+          },
+          {
+            "group": "SDK",
+            "icon": "book",
+            "pages": [
+              "developers/sdk-reference"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Yield Protocols",
+        "groups": [
+          {
+            "group": "Overview",
+            "icon": "sitemap",
+            "pages": [
+              "protocols/overview"
+            ]
+          },
+          {
+            "group": "Adaptor Creation",
+            "icon": "puzzle-piece",
+            "pages": [
+              "protocols/adaptor-creation/index",
+              "protocols/adaptor-creation/core-components",
+              "protocols/adaptor-creation/security"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Composing Protocols",
+        "groups": [
+          {
+            "group": "CPI Integration",
+            "icon": "plug",
+            "pages": [
+              "protocols/cpi-integration/index",
+              "protocols/cpi-integration/deposit",
+              "protocols/cpi-integration/request-withdraw",
+              "protocols/cpi-integration/withdraw",
+              "protocols/cpi-integration/instant-withdraw",
+              "protocols/cpi-integration/cancel-withdraw"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Security",
+        "groups": [
+          {
+            "group": "Security",
+            "icon": "shield",
+            "pages": [
+              "security/best-practices",
+              "security/deployed-programs",
+              "security/audits"
+            ]
+          },
+          {
+            "group": "Legal",
+            "icon": "file-contract",
+            "pages": [
+              "security/terms",
+              "security/disclaimer"
             ]
           }
         ]
       }
     ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    "global": {}
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -91,32 +216,19 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@voltr.xyz"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Launch App",
+      "href": "https://app.ranger.finance/earn"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/volaboratories",
+      "github": "https://github.com/voltrxyz"
     }
   }
 }

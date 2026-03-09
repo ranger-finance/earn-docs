@@ -1,0 +1,41 @@
+---
+title: DeFi Protocol Overview
+description: The Voltr protocol architecture — vaults, adaptors, and fund flow
+---
+
+<Frame>
+  <img src="/images/protocol_overview.png" alt="Protocol Overview" />
+</Frame>
+
+The Voltr protocol consists of two main programs that enable customizable yield strategies.
+
+## Vault (`voltr-vault program`)
+
+Vaults are the primary user interface, managing deposits and handling the accounting of user shares.
+
+## Adaptor (`voltr-adaptor program`)
+
+Adaptors are specialized components, plugged into vaults by vault owners, that handle the actual interaction with DeFi protocols:
+
+- Connect to specific DeFi protocols (e.g. Solend, Drift, Marginfi, Kamino)
+- Execute deposits and withdrawals of vault funds into external DeFi protocols
+- Track protocol-specific balances
+- Handle protocol-specific logic and state management
+- Maintain standardized interfaces for vault interaction
+
+## Fund Flow
+
+```
+Vault <-> Adaptor <-> External Protocol
+```
+
+## Integration Paths
+
+<CardGroup cols={2}>
+  <Card title="Build an Adaptor" icon="puzzle-piece" href="/protocols/adaptor-creation/index">
+    Implement protocol-specific deposit, withdraw, and strategy logic
+  </Card>
+  <Card title="CPI Integration" icon="code" href="/protocols/cpi-integration/index">
+    On-chain deposit and withdrawal instructions via Cross-Program Invocation
+  </Card>
+</CardGroup>

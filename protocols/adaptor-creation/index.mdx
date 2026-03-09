@@ -1,0 +1,26 @@
+---
+title: Adaptor Creation Guide
+description: Build custom adaptors to bridge Voltr vaults with external DeFi protocols
+---
+
+Adaptors serve as the bridge between Voltr vaults and external DeFi protocols, enabling standardized interactions while abstracting protocol-specific complexities. The Voltr protocol supports both built-in adaptors and custom adaptors created by external protocols.
+
+## Core Features
+
+### Strategy Management
+
+- **Strategy Creation**: Adaptors define protocol-specific strategies
+- **State Tracking**: Maintains current positions and balances
+- **Protocol Integration**: Handles protocol-specific interactions and account structures
+- **Asset Conversion**: Manages conversion between vault assets and protocol tokens
+
+## Getting Started
+
+<CardGroup cols={2}>
+  <Card title="Core Components" icon="cubes" href="/protocols/adaptor-creation/core-components">
+    Required instructions and state management
+  </Card>
+  <Card title="Security Considerations" icon="shield" href="/protocols/adaptor-creation/security">
+    Security best practices for adaptor development
+  </Card>
+</CardGroup>
